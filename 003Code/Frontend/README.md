@@ -1,79 +1,37 @@
-# 식재료 절약단
+# 식재료 절약단(졸업 프로젝트)
+- Web Frontend 파트
 
-- 2023 한밭대학교 컴퓨터공학과 캡스톤디자인 KJJ팀 - Web Frontend Part
-- 프로젝트 기간 2022.12 ~ 2023.11
+## 프로젝트 설명
+### 기간
+2023.02 ~ 2023.11
 
-## 협업 도구들
+### 팀 구성
+- Web Frontend - 김기범(React)
+- App Frontend - 조성훈(React)
+- Backend - 정형목
 
-- pigma
-- docker
+### 식재료 절약단이란?
+- 잘못된 주문 및 유통기한이 경과하는 식재료의 낭비를 최소화하기 위해 개발된 웹사이트 입니다.
+- 식당 관리자는 웹 페이지를 통해 판매할 음식을 등록, 수정 및 삭제할 수 있습니다.
+- 소비자는 애플리케이션을 통해 식당 이용일을 예약할 수 있으며, 예약이 완료되면 관리자 웹페이지에서 해당 예약에 대한 정보가 계산되어 익일 식재료 예측을 시각적으로 확인할 수 있습니다.
+
+### 협업 도구들
+- pigma 
 - postman
-- ssh server build(cyber duck)
 - Swagger
 
-## 언어
-
-- CSS
-- JavaScript
-- HTML
-
-## 프레임워크
-
-- React
-
-## 사용한 라이브러리들
-
-- apexchart
-- mui bootstrap
-- keycloak-js
-- react-keycloak/web
-- axios
-- date-fns
-- react-cookie
-- react-router-dom
-- react-swipeable-views
-- recoil
-- recoil-persist
-- styled-components
-
 ## 주요 기능들
-
-- 로그인(키클락 연계 및 식재료 절약단 서버 자체), 회원가입
-- 메뉴 CRUD
-- 공공 데이터 포털 공휴일 정보
-- mui - modal, skelton 등
-- 버튼 loading Spinner
-- useQuery, useMutation - api 통신
-- Slider - SwipeableViews 라이브러리
-
-## naming rules
-
-- 디렉토리 파일명은 소문자로 한다.
-- CamelCase로 작성한다.
-- 디렉토리자체가 react 컴포넌트가 바로들어 있는 폴더라면 폴더이름을 대문자로 시작할 것
-- 직접적으로 바로 react컴포넌트가 들어있지 않은 간접적인 관계의 폴더라면 소문자 단수로 표기
-- loginSection2 같은 불분명한 의미는 짓지 않는다. 명확한 이름으로 표시를 한다. 어쩔수 없이 길어져도 괜찮다.
-
-### components
-
-- 재사용 가능한 컴포넌트
-- 다양한 곳에 사용가능한 범용가능한 컴포넌트
-
-### components / atoms
-
-- 더이상 쪼갤 수 없는 가장 작은 단위의 컴포넌트
-
-### domains
-
-- 주제별로 구분할 수 있는 컴포넌트
-- domains/accounts/login or domains/accounts/signup 등
-
-### containers
-
-- 재사용이 불가능 한 컴포넌트(홈페이지, 약관등의 페이지)
-
-## git version 관련 타이밍
-
-- 기능별로 개발을 완료했을 때마다 commit한다.
-- 종류별로 만들 부분이 있을 때마다 branch를 나눠서 개발함.
-- 나중에 merge해서 한번에 많은 기능을 가진채로 개발하는 것을 막음.
+1. 로그인
+   - jwt 방식을 활용하여 토큰을 쿠키에 저장하는 방식으로 로그인 기능을 구현하였습니다.
+2. 익일 필요 식재료 및 예약 정보 확인
+   - react apexchart 라이브러리를 사용하여 시각화하였습니다.
+![스크린샷 2023-12-11 오후 6 50 49](https://github.com/kkb4363/SenierProject/assets/101088024/bbc56762-3580-4dc9-961a-38bc973a765a)
+3. 음식 메뉴 추가, 수정, 삭제, 품절, 재판매
+   - 관리자는 판매할 음식을 추가, 수정 등 이 가능합니다.
+   - 음식을 추가할 때, 서버에 저장된 식재료 목록에 포함된 경우 자동으로 해당 음식에 대한 식재료 정보가 추가되게끔 구현하였습니다.
+![ezgif com-video-to-gif](https://github.com/kkb4363/SenierProject/assets/101088024/22534f4f-6726-49bd-b52c-a906e2c20502)
+4. 반응형
+   - mui bootstrap을 사용하여 반응형 웹사이트를 구현하였습니다.
+![ezgif com-video-to-gif](https://github.com/kkb4363/SenierProject/assets/101088024/6ab52c7b-15b5-4e89-b5a2-eaa297ca6d2b)
+5. api 통신
+   - useQuery 라이브러리를 사용하여 백엔드서버랑 연동이 되게 구현하였습니다.
